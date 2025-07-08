@@ -6,7 +6,17 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <span>Welcome to the New Message page!</span>
-  </body>
+  <form method="POST" action="/new">
+    <h1>New Message</h1>
+    <label for="user">User:</label>
+    <input type="text" id="user" name="user" required />
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 </html>

@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <span>Welcome to the Home Page!</span>
-    <% messages.forEach(message => { %>
-    <div class="message">
-      <h2><%= message.title %></h2>
-      <p>
-        <small>Posted by <%= message.user %> on <%= message.added %></small>
-      </p>
+    <div class="homeContent">
+      <h1>Welcome to the Home Page!</h1>
+      <div class="homeMsgs">
+        <% messages.forEach(message => { %>
+        <div class="message">
+          <a href="/post/<%= message.id %>"><%= message.title %></a>
+        </div>
+        <% }); %>
+      </div>
+      <a href="/new" class="button">New Message</a>
     </div>
-    <% }); %>
   </body>
 </html>
